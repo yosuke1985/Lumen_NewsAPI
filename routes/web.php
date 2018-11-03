@@ -16,9 +16,14 @@ $router->get('/', function () use ($router) {
 });
 
 
-$router->get('foo', function () {
+$router->get('/foo', function () {
     return 'Hello World';
 });
 
 
+
+
+
 $router->get(env('VERSION').'/articles', 'ArticleController@get');
+
+$router->get(env('VERSION').'/articles/{id}', 'ArticleController@getById');

@@ -16,6 +16,17 @@ class ArticleController extends Controller
     {
 //        $articles = Article::all();
 //        return response()->json($articles);
-        echo "hello yosuke";
+//        echo "hello yosuke";
+        $articles = Article::all();
+        echo $articles;
+        return response()->json($articles);
+    }
+
+    public function getById($id){
+
+        $article = Article::find($id);
+        echo $article;
+
+        return response()->json($article);
     }
 }
